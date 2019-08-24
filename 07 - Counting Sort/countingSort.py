@@ -47,7 +47,7 @@ def drawGraph(x,y,yInv,XAxis = "Lista de Numeros", YAxis = "Tempo de ordenação
     ax.plot(x,y,color = 'blue', markerfacecoloralt ='green', label = "Aleatorio")
     plt.scatter(x,yInv,marker= 'v',facecolor='blue',edgecolors= 'blue', linewidths=4)  
     ax.plot(x,yInv, color = 'red', label = "Invertida")
-    ax.legend(bbox_to_anchor=(1, 1),bbox_transform=plt.gcf().transFigure, loc='center left')
+    ax.legend(bbox_to_anchor=(1, 1),bbox_transform=plt.gcf().transFigure)
     plt.ylabel(YAxis)
     plt.xlabel(XAxis)
     fig.savefig(YAxis)
@@ -66,7 +66,7 @@ def generateList(tam):
   shuffle(newList)
   return newList
 
-#sys.setrecursionlimit(10**6)  
+ 
 
 listValueGraph = [100 ,200 , 400, 500, 1000, 2000]
 #~~~~~~~~~~ Tests ~~~~~~~~~~~#
@@ -121,4 +121,4 @@ drawGraph(listValueGraph,
           timeSortInvertedCase,
           timeSortRandomCase, 
           XAxis="Número de elementos em milhares", 
-          YAxis="Tempo de ordenação em Seg-test graph")
+          YAxis="Tempo de ordenação em Seg")
